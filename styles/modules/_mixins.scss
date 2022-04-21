@@ -1,0 +1,24 @@
+@mixin ul-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin links-reset {
+  text-decoration: none;
+}
+
+@mixin text-reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin plugFont {
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

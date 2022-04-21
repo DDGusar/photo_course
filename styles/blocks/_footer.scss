@@ -1,0 +1,12 @@
+@import "../modules/variables";
+
+.footer {
+  background-color: $footer-background-color;
+  &__logo {
+    @include text-reset;
+    @include plugFont;
+    padding: 50px;
+    box-sizing: border-box;
+    color: $color-white;
+  }
+}

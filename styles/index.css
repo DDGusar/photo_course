@@ -1,0 +1,273 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts/font.css);
+.header {
+  background-color: #df2626;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 22px 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header__logo {
+  background-image: url(../images/head_logo.svg);
+  height: 40px;
+  width: 40px;
+}
+
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+}
+
+.header__menu-item {
+  text-decoration: none;
+  color: #fbfbfb;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.card {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "name image" "title image" "subhead image" "button image" "flex-container flex-container";
+  padding: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.card_type_course {
+      grid-template-areas: "title image" "subhead image" "button image";
+}
+
+.card_type_composition {
+  background-color: #ffce00;
+}
+
+.card_type_camera {
+  background-color: #000;
+  color: #fff;
+      grid-template-areas: "name image" "title image" "subhead image" "flex-container flex-container";
+}
+
+.card_type_search {
+      grid-template-areas: "name ." "title ." "image subhead" "image button";
+}
+
+.card__name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: name;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.card__header {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: title;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 110px;
+}
+
+.card__header_type_composition {
+  font-size: 64px;
+  line-height: 64px;
+  width: 550px;
+}
+
+.card__header_type_camera {
+  font-size: 122px;
+  line-height: 122px;
+}
+
+.card__subheader {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: subhead;
+  width: 460px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.card__subheader_type_camera {
+  text-transform: uppercase;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.card__text {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.card__image {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: image;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.card__button {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: button;
+  -ms-flex-item-align: end;
+      align-self: end;
+  width: 228px;
+  height: 49px;
+  border: 2px solid #000;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+}
+
+.card__link {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.card__link:visited {
+  color: #000;
+}
+
+.card__flex-container {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: flex-container;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 56px;
+  margin-top: 100px;
+}
+
+.card__flex-container_type_camera {
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  margin-top: 180px;
+  gap: 28px;
+}
+
+.card__flex-item {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.card__flex-item_type_camera {
+  margin-right: 144px;
+}
+
+.card__quote {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 43px;
+  line-height: 43px;
+}
+
+.card__student {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 28px;
+}
+
+.card__social-network {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.footer {
+  background-color: #df2626;
+}
+
+.footer__logo {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  padding: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+}
+
+.register {
+  background-color: #df2626;
+  color: #fff;
+}
+
+.register__arrow {
+  background-image: url(../../images/arrow.svg);
+  width: 129px;
+  height: 95px;
+}
+
+.register__header {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 120px;
+  line-height: 120px;
+  width: 700px;
+}
+
+.register__email {
+  font-family: "Roboto", Arial, sans-serif;
+}
+/*# sourceMappingURL=index.css.map */

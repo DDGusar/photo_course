@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Курс по фотографии</title>
+    <meta
+      name="description"
+      content="проект на Яндекс Практикуме. Использование SCSS"
+    />
+    <meta name="keywords" content="html, css, scss, JS" />
+    <meta name="author" content="Дарья Гусар" />
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo"></div>
+      <nav class="header__menu">
+        <a href="index.html#more" class="header__menu-item">Композиция</a>
+        <a href="index.html#camera" class="header__menu-item">Камера</a>
+        <a href="index.html#orders" class="header__menu-item">Поиск заказов</a>
+      </nav>
+    </header>
+    <main class="content">
+      <section class="card card_type_course">
+        <h1 class="card__header">Курс по фотографии</h1>
+        <img src="images/card_course.jpg" alt="лес" class="card__image" />
+        <div class="card__subheader">
+          <p class="card__text">
+            Фотография в природных условиях, уроки по композиции и по
+            пользованию камерой.
+          </p>
+        </div>
+        <div class="card__button">
+          <a href="index.html#more" class="card__link">Подробнее</a>
+        </div>
+      </section>
+      <section class="card card_type_composition" id="more">
+        <h2 class="card__name">Композиция</h2>
+        <h1 class="card__header card__header_type_composition">
+          Изучите композицию
+        </h1>
+        <img
+          src="images/card_composition.jpg"
+          alt="лес с дорогой"
+          class="card__image"
+        />
+        <div class="card__subheader">
+          <p class="card__text">
+            Вы изучите гармоничное размещение всех элементов изображения на
+            снимке.
+          </p>
+          <p class="card__text">
+            Изучите композицию интуитивную и какие-то определённые законы.
+          </p>
+        </div>
+        <div class="card__button">
+          <a href="/index.html#register" class="card__link">Записаться!</a>
+        </div>
+        <ul class="card__flex-container">
+          <li class="card__flex-item">
+            Првило третей, при котором нужно распологать объекты на
+            пересечениях.
+          </li>
+          <li class="card__flex-item">
+            Простота: убирай всё лишнее и кадрируй!
+          </li>
+          <li class="card__flex-item">
+            Равновесие: уравновесь пятна объекта и фона.
+          </li>
+          <li class="card__flex-item">
+            3D глубина кадра: расположи объект позади и перед другими
+            предметами.
+          </li>
+        </ul>
+      </section>
+      <section class="card card_type_camera" id="camera">
+        <h2 class="card__name">камера</h2>
+        <h1 class="card__header card__header_type_camera">
+          Настройка Съемка Обработка
+        </h1>
+        <img src="images/card_camera.jpg" alt="листва" class="card__image" />
+        <p class="card__subheader card__subheader_type_camera">
+          отзывы про часть о камерах:
+        </p>
+        <ul class="card__flex-container card__flex-container_type_camera">
+          <li class="card__flex-item card__flex-item_type_camera">
+            <p class="card__quote">
+              на этом курсе я научился пользоватся камерой, как настоящий
+              профессионал!
+            </p>
+            <p class="card__student">Питер, водитель.</p>
+            <p class="card__social-network">@piter123</p>
+          </li>
+          <li class="card__flex-item card__flex-item_type_camera">
+            <p class="card__quote">
+              супер крутой курс! на&nbsp;части про фотики я&nbsp;стал
+              разбираться в предназначении кнопок
+            </p>
+            <p class="card__student">Джон, спортсмен.</p>
+            <p class="card__social-network">@john_sport</p>
+          </li>
+        </ul>
+      </section>
+      <section class="card card_type_search" id="orders">
+        <h2 class="card__name">поиск заказов</h2>
+        <h1 class="card__header card__header_type_composition">
+          Научим находить заказы!
+        </h1>
+        <img src="images/card_orders.jpg" alt="дерево" class="card__image" />
+        <p class="card__subheader">
+          Мы научим вас искать заказы на всяких фриланс биржах, а когда вы
+          сделаете крутое портфолио, мы поможем найти постоянную работу.
+        </p>
+        <div class="card__button">
+          <a href="/index.html#register" class="card__link">Записаться!</a>
+        </div>
+      </section>
+      <section class="register" id="register">
+        <div class="register__arrow"></div>
+        <h3 class="register__header">Записаться! Сейчас!</h3>
+        <form action="" class="register__form">
+          <input type="email" class="register__email" value="Ваша почта" />
+          <button type="submit" class="register__button">Записаться!</button>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__logo">2021 Photo-lessons.</p>
+    </footer>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>

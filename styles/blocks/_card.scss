@@ -1,0 +1,150 @@
+.card {
+  display: grid;
+  grid-template-areas:
+    "name image"
+    "title image"
+    "subhead image"
+    "button image"
+    "flex-container flex-container";
+  padding: 50px;
+  box-sizing: border-box;
+  @include plugFont;
+
+  &_type_course {
+    grid-template-areas:
+      "title image"
+      "subhead image"
+      "button image";
+  }
+
+  &_type_composition {
+    background-color: $color-yellow;
+  }
+
+  &_type_camera {
+    background-color: $color-black;
+    color: $color-white;
+
+    grid-template-areas:
+      "name image"
+      "title image"
+      "subhead image"
+      "flex-container flex-container";
+  }
+
+  &_type_search {
+    grid-template-areas:
+      "name ."
+      "title ."
+      "image subhead"
+      "image button";
+  }
+
+  &__name {
+    grid-area: name;
+    @include text-reset;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    text-transform: uppercase;
+  }
+  &__header {
+    grid-area: title;
+    @include text-reset;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 110px;
+    &_type_composition {
+      font-size: 64px;
+      line-height: 64px;
+      width: 550px;
+    }
+    &_type_camera {
+      font-size: 122px;
+      line-height: 122px;
+    }
+  }
+  &__subheader {
+    grid-area: subhead;
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 18px;
+    line-height: 28px;
+    @include text-reset;
+    &_type_camera {
+      text-transform: uppercase;
+      align-self: end;
+    }
+  }
+  &__text {
+    @include text-reset;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  &__image {
+    grid-area: image;
+    justify-self: end;
+  }
+  &__button {
+    grid-area: button;
+    align-self: end;
+    width: 228px;
+    height: 49px;
+    border: 2px solid $button-color;
+    border-radius: 24px;
+    @include flex-center;
+    background-color: $button-background-color;
+  }
+  &__link {
+    @include links-reset;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+
+    &:visited {
+      color: $font-color;
+    }
+  }
+  &__flex-container {
+    grid-area: flex-container;
+    @include ul-reset;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 56px;
+    margin-top: 100px;
+    &_type_camera {
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 180px;
+      gap: 28px;
+    }
+  }
+  &__flex-item {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    &_type_camera {
+      margin-right: 144px;
+    }
+  }
+  &__quote {
+    @include text-reset;
+    font-weight: 400;
+    font-size: 43px;
+    line-height: 43px;
+  }
+  &__student {
+    @include text-reset;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 28px;
+  }
+  &__social-network {
+    @include text-reset;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
