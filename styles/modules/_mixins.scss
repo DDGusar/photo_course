@@ -6,6 +6,7 @@
 
 @mixin links-reset {
   text-decoration: none;
+  color: $color-black;
 }
 
 @mixin text-reset {
@@ -21,4 +22,39 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin mediaTablet {
+  @media screen and (max-width: 1279px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "name"
+      "title"
+      "image"
+      "subhead"
+      "button"
+      "flex-container";
+    gap: 40px;
+    padding: 40px;
+  }
+  @media screen and (max-width: 750px) {
+    padding: 20px;
+  }
+}
+@mixin mediaFlex {
+  @media screen and (max-width: 1279px) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 20px;
+  }
+}
+@mixin rotateKeyframe {
+  @keyframes rotation {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
 }

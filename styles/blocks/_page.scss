@@ -1,0 +1,4 @@
+@import "../modules/mixins";
+.page {
+  @include plugFont;
+}
