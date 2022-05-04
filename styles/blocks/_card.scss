@@ -197,9 +197,6 @@
       font-size: 14px;
       line-height: 18px;
     }
-    &_font_bold {
-      font-weight: 700;
-    }
     &_type_course {
       font-size: 20px;
       margin-top: 20px;
@@ -212,6 +209,10 @@
         line-height: 18px;
       }
     }
+  }
+  &__bold-text{
+
+    font-weight: 700;
   }
   &__image {
     grid-area: image;
@@ -231,8 +232,10 @@
       max-height: 685px;
     margin-bottom: 20px;}
     @media screen and (max-width: 750px) {
-    max-height: 278px;
+    max-height: 400px;
   margin-bottom: 30px;}
+  @media screen and (max-width: 400px) {
+  max-height: 278px;}
     }
     &_type_camera {
       @media screen and (max-width: 1279px) {

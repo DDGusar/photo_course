@@ -17,4 +17,4 @@
 - JavaScript
 - SCSS
 
-[github pages](https://ddgusar.github.io/mesto-project/index.html)
+[github pages](https://ddgusar.github.io/photo_course/index.html)

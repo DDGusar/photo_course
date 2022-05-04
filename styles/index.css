@@ -23,6 +23,9 @@
 
 .page {
   font-family: "Roboto", Arial, sans-serif;
+  min-width: 320px;
+  max-width: 1440px;
+  margin: auto;
 }
 
 @-webkit-keyframes rotation {
@@ -233,6 +236,10 @@
   top: -5px;
   left: 5px;
   overflow: hidden;
+}
+
+.header__burger:hover {
+  opacity: 0.7;
 }
 
 .card {
@@ -580,10 +587,6 @@
   }
 }
 
-.card__text_font_bold {
-  font-weight: 700;
-}
-
 .card__text_type_course {
   font-size: 20px;
   margin-top: 20px;
@@ -600,6 +603,10 @@
     font-size: 14px;
     line-height: 18px;
   }
+}
+
+.card__bold-text {
+  font-weight: 700;
 }
 
 .card__image {
@@ -639,8 +646,14 @@
 
 @media screen and (max-width: 750px) {
   .card__image_type_composition {
-    max-height: 278px;
+    max-height: 400px;
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card__image_type_composition {
+    max-height: 278px;
   }
 }
 

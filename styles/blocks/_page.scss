@@ -1,4 +1,8 @@
 @import "../modules/mixins";
 .page {
   @include plugFont;
+
+  min-width: 320px;
+  max-width: 1440px;
+  margin: auto;
 }
