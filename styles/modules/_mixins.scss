@@ -27,6 +27,7 @@
 @mixin mediaTablet {
   @media screen and (max-width: 1279px) {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
     grid-template-areas:
       "name"
       "title"
@@ -36,9 +37,11 @@
       "flex-container";
     gap: 40px;
     padding: 40px;
+
   }
   @media screen and (max-width: 750px) {
     padding: 20px;
+    gap: 30px;
   }
 }
 @mixin mediaFlex {

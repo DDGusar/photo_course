@@ -5,11 +5,19 @@
   &__logo {
     @include text-reset;
     @include plugFont;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px;
     padding: 50px;
     box-sizing: border-box;
     color: $color-white;
     @media screen and (max-width: 1279px) {
       padding: 40px;
+    }
+    @media screen and (max-width: 750px) {
+      font-size: 12px;
+      line-height: 24px;
+      padding: 20px;
     }
   }
 }

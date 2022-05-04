@@ -10,12 +10,13 @@
     "flex-container flex-container";
 
   padding: 50px;
-  // column-gap: 50px;
-  // row-gap: 0;
   box-sizing: border-box;
   @include plugFont;
 
   @include mediaTablet;
+  @media screen and (max-width: 1279px) {
+    padding: 20px;
+  }
 
   &_type_course {
     grid-template-areas:
@@ -41,6 +42,7 @@
   &_type_camera {
     background-color: $color-black;
     color: $color-white;
+    grid-template-rows: 70px 370px auto 471px;
 
     grid-template-areas:
       "name image"
@@ -64,10 +66,16 @@
       "title ."
       "image subhead"
       "image button";
-    row-gap: 32px;
-    column-gap: calc((100vw - ((100vw - 156px) / 2) - 162px) / 2);
+    grid-template-rows: 80px 130px auto 50px;
     justify-content: space-between;
     @include mediaTablet;
+    @media screen and (max-width: 1279px) {
+      grid-template-areas:
+        "name"
+        "title"
+        "image"
+        "subhead"
+        "button";}
   }
 
   &__name {
@@ -82,6 +90,7 @@
       font-size: 14px;
       line-height: 20px;
       border-top: 1px solid $color-black;
+      margin-top: 17px;
       padding-top: 20px;
     }
     &_type_camera {
@@ -96,22 +105,33 @@
     font-weight: 400;
     font-size: 100px;
     line-height: 110px;
+    @media screen and (max-width: 1279px) {
+      margin-top: 4px;
+    }
     @media screen and (max-width: 750px) {
       font-size: 47px;
-      line-height: 56px;
+      line-height: 52px;
+      margin: 0;
     }
     &_type_composition {
       font-size: 64px;
       line-height: 64px;
       width: 80%;
+
+    @media screen and (max-width: 1279px) {
+      margin-top: 2px;
+      margin-bottom: 17px;
+    }
       @media screen and (max-width: 750px) {
         font-size: 30px;
         line-height: 38px;
+        margin-bottom: 28px;
       }
     }
     &_type_camera {
       font-size: 122px;
       line-height: 122px;
+      @media screen and (max-width: 1279px) {margin-top: 1px;}
       @media screen and (max-width: 750px) {
         font-size: 48px;
         line-height: 56px;
@@ -138,18 +158,32 @@
     line-height: 28px;
     @include text-reset;
     margin-top: 95px;
+    @media screen and (max-width: 1279px) {
+      margin: 0;
+    }
 
     @media screen and (max-width: 750px) {
       width: 100%;
+      gap: 36px;
+      font-size: 14px;
+      line-height: 18px;
     }
+    
     &_type_camera {
       text-transform: uppercase;
       align-self: end;
     }
     &_type_search {
       width: 380px;
+      margin-left: calc(100% - 380px);
+      margin-top: 125px;
+      @media screen and (max-width: 1279px) {
+        margin: 0;
+        margin-top: 27px;
+      }
       @media screen and (max-width: 750px) {
         width: 100%;
+        margin-top: 32px;
       }
     }
   }
@@ -169,6 +203,9 @@
     &_type_course {
       font-size: 20px;
       margin-top: 20px;
+      @media screen and (max-width: 1279px) {
+        margin: 0;
+      }
 
       @media screen and (max-width: 750px) {
         font-size: 14px;
@@ -180,8 +217,46 @@
     grid-area: image;
     justify-self: end;
     width: 96%;
+    @media screen and (max-width: 1279px) {
+      width: 100%;
+    }
+    &_type_course{
+      @media screen and (max-width: 1279px) {
+      margin: 20px 0;}
+      @media screen and (max-width: 750px) {
+      margin: 32px 0;}
+    }
+    &_type_composition{
+      @media screen and (max-width: 1279px) {
+      max-height: 685px;
+    margin-bottom: 20px;}
+    @media screen and (max-width: 750px) {
+    max-height: 278px;
+  margin-bottom: 30px;}
+    }
+    &_type_camera {
+      @media screen and (max-width: 1279px) {
+      margin-top: 17px;
+      margin-bottom: 20px;
+      max-height: 656px;
+      object-fit: cover;
+      object-position: top;}
+      @media screen and (max-width: 750px) {
+        margin-top: 28px;
+        margin-bottom: 35px;
+        max-height: 268px;
+      }
+    }
     &_type_search {
       justify-self: start;
+      margin-top: 105px;
+      @media screen and (max-width: 1279px) {
+        margin-top: 17px;
+        max-height: 360px;
+      }
+      @media screen and (max-width: 750px) {
+        margin-top: 34px;
+      }
     }
   }
 
@@ -196,13 +271,18 @@
     height: 49px;
     border: 2px solid $button-color;
     border-radius: 24px;
+    box-sizing: border-box;
     @include flex-center;
     background-color: $button-background-color;
+    @media screen and (max-width: 1279px) {
+      margin-top: 20px;
+    }
     @media screen and (max-width: 750px) {
       width: 169px;
       height: 40px;
       font-size: 14px;
       line-height: 28px;
+      margin: 0;
     }
 
     &:hover {
@@ -211,6 +291,16 @@
 
     &:visited {
       color: $font-color;
+    }
+    &_type_search {
+      margin-left: calc(100% - 380px);
+      @media screen and (max-width: 1279px) {
+        margin: 0;
+        margin-top: 20px;
+      }
+      @media screen and (max-width: 750px) {
+        margin: 0;
+      }
     }
   }
   &__flex-container {
@@ -221,12 +311,25 @@
     gap: 56px;
     margin-top: 100px;
     @include mediaFlex;
+    @media screen and (max-width: 1279px) {
+      margin-top: 40px;
+    }
+    @media screen and (max-width: 750px) {
+      margin-top: 50px;
+      gap: 15px;
+    }
 
     &_type_camera {
       grid-template-columns: repeat(2, 1fr);
-      margin-top: 180px;
-      gap: 28px;
       @include mediaFlex;
+      margin-top: 180px;
+      gap: 55px;
+      @media screen and (max-width: 1279px) {
+        margin-top: 110px;
+      }
+      @media screen and (max-width: 750px) {
+        margin-top: 30px;
+      }
     }
   }
   &__flex-item {
@@ -244,12 +347,27 @@
 
     @media screen and (max-width: 1279px) {
       border-bottom: 1px solid $color-black;
+      padding-bottom: 30px;
+    }
+    @media screen and (max-width: 750px) {
+      font-size: 14px;
+      line-height: 18px;
+      padding-bottom: 12px;
+      width: 98%;
+
     }
     &_type_camera {
-      margin-right: 144px;
+      margin-right: calc(100% - 513px);
       @media screen and (max-width: 1279px) {
         border-bottom: 1px solid $color-white;
         margin-right: 0;
+        margin-top: 30px;
+        padding-bottom: 60px;
+      }
+      @media screen and (max-width: 750px) {
+        width: 100%;
+        padding-bottom: 29px;
+        margin: 0;
       }
     }
   }
@@ -259,7 +377,7 @@
     font-size: 43px;
     line-height: 43px;
     @media screen and (max-width: 1279px) {
-      max-width: 71%;
+      max-width: 75%;
     }
 
     @media screen and (max-width: 750px) {
@@ -274,6 +392,10 @@
     font-weight: 400;
     font-size: 17px;
     line-height: 28px;
+    @media screen and (max-width: 750px) {
+      font-size: 14px;
+      line-height: 20px;
+    margin-top: 30px;}
   }
   &__social-network {
     @include text-reset;
@@ -281,5 +403,9 @@
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
+    @media screen and (max-width: 750px) {
+      font-size: 12px;
+      line-height: 12px;
+    margin-top: 6px;}
   }
 }
