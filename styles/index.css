@@ -210,7 +210,7 @@
 @media screen and (max-width: 1279px) {
   .header__burger {
     display: block;
-    background-image: url(../../images/burger.svg);
+    background-image: url(../images/burger.svg);
     width: 32px;
     height: 20px;
     border-bottom: 3px solid #fff;
@@ -229,7 +229,7 @@
 
 .header__burger_active {
   position: relative;
-  background-image: url(../../images/plus.svg);
+  background-image: url(../images/plus.svg);
   height: 32px;
   padding: 0;
   border: none;
@@ -1010,7 +1010,7 @@
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: arrow;
-  background-image: url(../../images/arrow.svg);
+  background-image: url(../images/arrow.svg);
   width: 129px;
   height: 95px;
   margin-top: 10px;
